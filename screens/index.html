@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div class="app">
+        <header class="app-header">
+            <div class="brand">
+                <span class="logo">🫐</span>
+                <span class="title">sim</span>
+            </div>
+            <nav class="primary-nav" aria-label="Main">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#settings" class="nav-link">Settings</a>
+                <a href="#help" class="nav-link">Help</a>
+            </nav>
+            <label class="theme-switch switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+        </header>
+        <div class="screen">
+            <section id="home">
+                <h1>Welcome to sim</h1>
+                <p class="subtitle">Your partner for creating healthy computer habits.</p>
+                
+                <div class="hero-grid">
+
+                    <div class="hero">
+                        <h2>Eye Strain</h2>
+                        <p>Relax your eyes to prevent tension. Helps you monitor and release eye strain.</p>
+                    </div>
+
+                    <div class="hero">
+                        <h2>Distance Check</h2>
+                        <p>Know your healthy distance. Keeps you from sitting too close to the screen.</p>
+                    </div>
+
+                    <div class="hero">
+                        <h2>Night Usage Limit</h2>
+                        <p>Prioritize your sleep. Helps you sleep better by reducing late night screen time.</p>
+                    </div>
+
+                    <div class="hero">
+                        <h2>Daily Total Limit</h2>
+                        <p>Set healthy boundaries. Encourages you to stick to your screen time goals.</p>
+                    </div>
+
+
+                    <div class="hero">
+                        <h2>Break reminders</h2>
+                        <p>Step away and recharge. Reminds you to take regular breaks to prevent strain.</p>
+                    </div>
+
+                    <div class="hero">
+                        <h2>Blue Light Filter</h2>
+                        <p>Reduce blue light based on the time of day. Helps you sleep better at night.</p>
+                    </div>
+
+                
+                </div>
+                <div class="cta-row">
+                    <a href="#settings" class="btn btn-primary">Get started</a>
+                    <a href="#help" class="btn btn-ghost">Learn more</a>
+                </div>
+            </section>
+            
+            <section id="settings">
+                <h1>Settings</h1>
+            
+                <form class="form-grid">
+                    <!-- Eye Strain Prevention -->
+                    <fieldset class="form-card">
+                        <legend>Eye Strain</legend>
+
+                        <label class="feature-switch">
+                            <span>Enable eye strain prevention</span>
+                            <span class="switch">
+                            <input type="checkbox" id="eyeStrainPreventionEnable">
+                            <span class="slider round"></span>
+                            </span>
+                        </label>
+                        <div class="cta-row-feature">
+                            <a href="#relaxed_face" class="btn">Scan relaxed</a>
+                        </div>
+                    </fieldset>
+
+                    <!-- Distance Check -->
+                    <fieldset class="form-card">
+                        <legend>Distance Check</legend>
+                        <label class="feature-switch">
+                            <span>Enable distance check</span>
+                            <span class="switch">
+                            <input type="checkbox" id="distanceCheckEnable">
+                            <span class="slider round"></span>
+                            </span>
+                        </label>
+                        <div class="cta-row-feature">
+                            <a href="#calibrate_distance" class="btn">Calibrate distance</a>
+                        </div>
+                    </fieldset>
+
+                    <!-- Block after Time (bedtime) -->
+                    <fieldset class="form-card">
+                        <legend>Night Usage Limit</legend>
+                        <label class="feature-switch">
+                            <span>Enable blocking after time</span>
+                            <span class="switch">
+                            <input type="checkbox" id="nightLimitEnable">
+                            <span class="slider round"></span>
+                            </span>
+                        </label>
+                        <label class="input-row">
+                            <span>Block at</span>
+                            <input type="time" id="nightLimitTime" value="22:00"/>
+                        </label>
+                    </fieldset>
+
+                    <!-- Daily Total Limit -->
+                    <fieldset class="form-card">
+                        <legend>Daily Total Limit</legend>
+                        <label class="feature-switch">
+                            <span>Enable blocking after limit</span>
+                            <span class="switch">
+                            <input type="checkbox" id="dailyLimitEnable">
+                            <span class="slider round"></span>
+                            </span>
+                        </label>
+                        <label class="input-row">
+                            <span>Total per day</span>
+                            <input type="time" id="dailyLimitTime" value="04:00"/>
+                            <span class="suffix">hours</span>
+                        </label>
+                    </fieldset>
+
+                    <!-- 20-20-20 Rule -->
+                    <fieldset class="form-card">
+                        <legend>Break Reminders</legend>
+                        <label class="feature-switch">
+                            <span>Enable break reminders</span>
+                            <span class="switch">
+                            <input type="checkbox" id="breakRemindersEnable">
+                            <span class="slider round"></span>
+                            </span>
+                        </label>
+                        <p class="muted">20 - Every 20 minutes</p>
+                        <p class="muted">20 - Look at something 20 feet away
+                        <p class="muted">20 - For at least 20 seconds.</p>
+                    </fieldset>
+
+                    <!-- Blue Light Filter -->
+                    <fieldset class="form-card">
+                        <legend>Blue Light Filter</legend>
+                        <label class="feature-switch">
+                            <span>Enable blue light filter</span>
+                            <span class="switch">
+                            <input type="checkbox" id="blueLightFilterEnable">
+                            <span class="slider round"></span>
+                            </span>
+                        </label>
+                        <div class="slider-grid">
+                            <label class="input-row">
+                                <span>Day</span>
+                                <input type="range" id=blueLightFilterDay min="0" max="100" />
+                                <span class="suffix">%</span>
+                            </label><br>
+                            <label class="input-row">
+                                <span>Evening</span>
+                                <input type="range" id=blueLightFilterEvening min="0" max="100" />
+                                <span class="suffix">%</span>
+                            </label><br>
+                            <label class="input-row">
+                                <span>Night</span>
+                                <input type="range" id=blueLightFilterNight min="0" max="100" />
+                                <span class="suffix">%</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="cta">
+                    <button type="button" id=saveSettings class="btn btn-primary">Save settings</button>
+                </div>
+            </section>
+            <section id="help">
+                <h1>Frequently Asked Questions</h1>
+                <div class = "faq-card">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I set up sim?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Once the application is installed, you need to grant necessary permissions for camera access.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does Sim monitor my computer usage?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim runs in the background to track your active computer usage. All data is stored locally on your device.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What should I do if sim is not detecting my computer usage?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ensure you have granted the necessary accessibility permissions in your system settings. If the issue persists, try restarting the Sim application.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How to fix trouble with the facial tension or distance monitoring?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ensure that sim has permission to use your camera. Make sure you are in a well-lit environment and your face is clearly visible to the camera. If the issue persist, ry recalibrating the feature in the Sim settings.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="relaxed_face">
+                <h1>Scan: Relaxed Face</h1>
+                <div class="scanner">
+                    <div class="camera-frame">
+                        <video id="camera-relaxed" autoplay playsinline></video>
+                    </div>
+                    
+                    <div class="cta-row">
+                        <a href="#settings" class="btn btn-ghost">Back</a>
+                        <button class="btn btn-primary" id="capture-relaxed" onclick="alert('Relaxed face scanned!')">Capture</button>
+                    </div>
+
+                    <canvas id="canvas-relaxed" style="display: none;"></canvas>
+                </div>
+            </section>
+            <section id="calibrate_distance">
+                <h1>Calibrate Distance</h1>
+                <div class="scanner">
+                    <div class="camera-frame">
+                        <video id="camera-distance" autoplay playsinline></video>
+                    </div>
+                    
+                    <div class="cta-row">
+                        <a href="#settings" class="btn btn-ghost">Back</a>
+                        <button class="btn btn-primary" id="capture-distance" onclick="alert('Distance calibrated!')">Capture</button>
+                    </div>
+
+                    <canvas id="canvas-distance" style="display: none;"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="theme_switch.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const faqs = document.querySelectorAll(".faq-item");
+        
+          faqs.forEach(faq => {
+            faq.querySelector(".faq-question").addEventListener("click", () => {
+              faq.classList.toggle("active");
+            });
+          });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const allLinks = document.querySelectorAll('a[href^="#"]');
+
+            // Function to show a section
+            function showSection(id) {
+                sections.forEach(sec => sec.classList.remove('active'));
+                const target = document.querySelector(id);
+                if (target) target.classList.add('active');
+            }
+        
+            // Handle navigation clicks (including buttons)
+            allLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                e.preventDefault();
+                const id = link.getAttribute('href');
+                showSection(id);
+                history.pushState(null, '', id);
+            });
+          });
+        
+          // Show correct section on load
+          const initial = window.location.hash || '#home';
+          showSection(initial);
+        });
+    </script>
+    <script src="../renderer.js"></script>
+    <script src="../settings.js"></script>
+</body>
+</html>
